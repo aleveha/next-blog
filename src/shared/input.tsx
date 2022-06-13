@@ -17,7 +17,7 @@ export const Input: FC<Props> = forwardRef<HTMLInputElement, Props>(({ name, lab
 				name={name}
 				aria-label={label}
 				className={clsx(
-					"py-3 px-4 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border border-gray-300 rounded-xl min-h-[2rem] w-full max-w-[30vw]",
+					"py-3 px-4 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border border-gray-300 rounded-xl min-h-[2rem] w-full",
 					className
 				)}
 				{...props}

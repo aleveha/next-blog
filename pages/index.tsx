@@ -11,14 +11,18 @@ interface Props {
 const Home: NextPage<Props> = ({ articles = [] }) => {
 	return (
 		<Layout title="All articles">
-			{articles.map(article => (
-				<Article article={article} key={article.id} />
-			))}
+			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+				{articles
+					.sort((a, b) => b.id - a.id)
+					.map(article => (
+						<Article article={article} key={article.id} />
+					))}
+			</div>
 		</Layout>
 	);
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const posts = JSON.parse(JSON.stringify(await client.post.findMany())) as Post[];
 
 	return {

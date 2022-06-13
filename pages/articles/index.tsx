@@ -5,8 +5,8 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { Article } from "../../src/shared/article";
-import { Button } from "../../src/shared/button";
 import { Layout } from "../../src/shared/layout";
+import { LinkButton } from "../../src/shared/link-button";
 import { userAtom } from "../../src/states/userState";
 
 const ArticlesPage: NextPage = () => {
@@ -27,12 +27,16 @@ const ArticlesPage: NextPage = () => {
 
 	return (
 		<Layout title="My articles">
-			<div>
-				{articles.map(article => (
-					<Article article={article} key={article.id} />
-				))}
+			<div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+				{articles
+					.sort((a, b) => b.id - a.id)
+					.map(article => (
+						<Article article={article} key={article.id} />
+					))}
 			</div>
-			<Button>New article</Button>
+			<LinkButton className="w-fit" href="/articles/edit/0">
+				New article
+			</LinkButton>
 		</Layout>
 	);
 };

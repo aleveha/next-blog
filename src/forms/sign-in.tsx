@@ -38,8 +38,8 @@ export const SignInForm = memo<SignInFormProps>(({ setUser }) => {
 					<div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
 						<div className="bg-white py-8 px-4 shadow sm:rounded-xl sm:px-10">
 							<form className="space-y-8" onSubmit={handleSubmit(onSubmit)}>
-								<Input label="Email address" type="email" {...register("email")} />
-								<Input label="Password" type="password" {...register("password")} />
+								<Input label="Email address" type="email" {...register("email", { required: true })} />
+								<Input label="Password" type="password" {...register("password", { required: true })} />
 								<Button className="w-full" type="submit">
 									Submit
 								</Button>

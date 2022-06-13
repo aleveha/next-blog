@@ -44,7 +44,7 @@ export const ProfileForm = memo<ProfileFormProps>(({ user, setUser }) => {
 	return (
 		<Layout title="Profile">
 			<div className="space-y-20">
-				<div>
+				<div className="w-full md:w-1/2">
 					<form className="space-y-8" onSubmit={handleSubmit(onSubmit)}>
 						<Input label="Email address" type="email" {...register("email")} />
 						<Input label="Nickname" type="text" {...register("nickname")} />
