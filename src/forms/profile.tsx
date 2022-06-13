@@ -54,7 +54,7 @@ export const ProfileForm = memo<ProfileFormProps>(({ user, setUser }) => {
 						</Button>
 					</form>
 				</div>
-				<Button className="bg-red-700" onClick={onDelete(user)}>
+				<Button variant="red" onClick={onDelete(user)}>
 					Delete account
 				</Button>
 			</div>
