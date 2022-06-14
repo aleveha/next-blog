@@ -11,7 +11,7 @@ export const Layout: FC<Props> = ({ children, title }) => {
 		<div className="min-h-screen bg-gray-50 space-y-20 pb-20">
 			<Header />
 			<div className="flex justify-center">
-				<div className="px-6 sm:px-0 container space-y-8">
+				<div className="px-6 container space-y-8">
 					{title ? <h1 className="font-semibold text-4xl uppercase">{title}</h1> : null}
 					{children}
 				</div>

@@ -31,7 +31,7 @@ export const Header = memo(() => {
 
 	return (
 		<header className="bg-white flex justify-center border-b max-h-[100px]">
-			<div className="px-6 sm:px-0 container py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
+			<div className="px-6 container py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
 				<Link href="/">
 					<a className="font-semibold uppercase text-xl text-neutral-600 flex justify-center items-center">
 						<Image src="/static/home.svg" alt="home" width={40} height={40} />
